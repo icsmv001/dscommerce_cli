@@ -26,6 +26,8 @@ import com.devsuperior_cli.dscommerce_cli.services.ClientService;
 public class ClientController {
 	@Autowired
 	private ClientService service;
+	
+	
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<ClientDTO> findById(@PathVariable  Long id) {
@@ -33,6 +35,8 @@ public class ClientController {
 		return  ResponseEntity.ok(dto);
 	}
 		
+	
+	
 	@GetMapping()
 	public ResponseEntity<Page<ClientDTO>> findAll(Pageable pageable) {
 		Page<ClientDTO> dto = service.findAll(pageable);
