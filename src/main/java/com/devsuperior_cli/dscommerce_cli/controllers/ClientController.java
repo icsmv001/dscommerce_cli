@@ -36,12 +36,12 @@ public class ClientController {
 	}
 		
 	
-	
 	@GetMapping()
 	public ResponseEntity<Page<ClientDTO>> findAll(Pageable pageable) {
 		Page<ClientDTO> dto = service.findAll(pageable);
 		return ResponseEntity.ok(dto);
 	}
+	
 	
 	@PostMapping()
 	public ResponseEntity<ClientDTO> insert(@RequestBody  ClientDTO dto) {
@@ -61,7 +61,7 @@ public class ClientController {
 	public ResponseEntity<Void> delete(@PathVariable  Long id) {
 		service.delete(id);
 		return  ResponseEntity.noContent().build();
-		
+	
 	}
 	
 	
