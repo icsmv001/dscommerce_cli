@@ -5,18 +5,25 @@ import java.util.Objects;
 
 import com.devsuperior_cli.dscommerce_cli.entities.Client;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
 public class ClientDTO {
 	
 	
 	
 	private Long id;
+	
+	@NotBlank(message = "Campo requerido")
 	private String name;
 	private String cpf;
 	private Double income;
+	@PastOrPresent(message ="Data nao pode ser futura")
 	private LocalDate birthDate;
 	private Integer children;
-	
-	
 	public ClientDTO() {
 		
 	}
