@@ -17,7 +17,9 @@ public class ClientDTO {
 	private Integer children;
 	
 	
-
+	public ClientDTO() {
+		
+	}
 
 	
 	public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {

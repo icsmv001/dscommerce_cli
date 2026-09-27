@@ -1,8 +1,8 @@
 package com.devsuperior_cli.dscommerce_cli.services.exceptions;
 
-public class ResourceNotFoundException  extends RuntimeException {
+public class DatabaseException  extends RuntimeException {
 	
-   public ResourceNotFoundException(String msg) {
+   public DatabaseException(String msg) {
 	super(msg);
    }
 
